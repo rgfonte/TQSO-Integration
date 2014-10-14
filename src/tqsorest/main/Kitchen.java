@@ -34,7 +34,8 @@ public class Kitchen {
 	
 	public ArrayList<Dish> makeOrder(DishType dishType, int quantity) {
 		ArrayList<Dish> dishesToReturn = new ArrayList<Dish>();
-		checkOrder(dishType);
+		if(!checkOrder(dishType))
+			throw new NoIngredientsException();
 		dishesToReturn.add(new Dish(DishType.MEAT_WATER));
 		return dishesToReturn;
 	}
