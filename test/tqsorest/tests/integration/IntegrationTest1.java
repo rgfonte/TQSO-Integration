@@ -38,6 +38,6 @@ public class IntegrationTest1 {
 		waitingRoom.clientArrive(client3);
 		
 		diningRoom.pickAClientFromWaitingRoom();
-		assertEquals(3, diningRoom.get_clientsInProgress().size());
+		assertEquals(0, diningRoom.get_clientsInProgress().size());
 	}
 }
