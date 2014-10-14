@@ -46,13 +46,13 @@ public class IntegrationTest2 {
 	}
 
 	@Test
-	public void testKitchen1() {
+	public void testKitchen1() throws NoIngredientsException{
 		exception.expect(NoIngredientsException.class);
 	    kitchen.makeOrder(DishType.MEAT_WATER, 1);
 	}
 	
 	@Test
-	public void testKitchen2() {
+	public void testKitchen2() throws NoIngredientsException {
 		insertIngredientsOnKitchenStock(100);
 		ArrayList<Dish> expectedDishesOfOrder = new ArrayList<Dish>();
 		ArrayList<Dish> returnedDishesOfOrder;
