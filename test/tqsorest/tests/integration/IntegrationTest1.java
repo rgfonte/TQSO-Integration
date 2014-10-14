@@ -28,7 +28,7 @@ public class IntegrationTest1 {
 
 	@Test
 	public void testEmptyWaitingRoom() {
-		assertFalse(diningRoom.pickAClientFromWaitingRoom());
+		assertFalse(waitingRoom.pickAClientFromWaitingRoom());
 	}
 	
 	@Test
@@ -38,6 +38,6 @@ public class IntegrationTest1 {
 		waitingRoom.clientArrive(client3);
 		
 		diningRoom.pickAClientFromWaitingRoom();
-		assertEquals(1, diningRoom.get_clientsInProgress().size());
+		assertEquals(3, diningRoom.get_clientsInProgress().size());
 	}
 }

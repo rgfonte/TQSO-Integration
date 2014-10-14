@@ -35,4 +35,12 @@ public class WaitingRoom {
 	public int getClientsNumber() {
 		return m_clients.size();
 	}
+	public boolean pickAClientFromWaitingRoom() 
+	{
+		if(m_clients.size()>0)
+			return true;
+		else
+			return false;
+	}
+	
 }
