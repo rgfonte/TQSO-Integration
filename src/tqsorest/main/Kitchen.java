@@ -32,7 +32,7 @@ public class Kitchen {
 		return true;
 	}
 	
-	public ArrayList<Dish> makeOrder(DishType dishType, int quantity) {
+	public ArrayList<Dish> makeOrder(DishType dishType, int quantity) throws NoIngredientsException {
 		ArrayList<Dish> dishesToReturn = new ArrayList<Dish>();
 		if(!checkOrder(dishType))
 			throw new NoIngredientsException();
